@@ -114,6 +114,10 @@ sky and is reduced by however much sky that block covers, in every hour
 including overcast ones. Treating diffuse as unobstructed is the usual shortcut
 and it flatters a shaded roof badly in a Zagreb winter.
 
+The browser side is plain TypeScript on Vite with three.js. No framework. Nine
+viewports are scissored out of one scene and redrawn together on a single sweep,
+which is a loop, not a component tree.
+
 ## Quick start
 
 The app is static and the district bundle is committed, so nothing has to be
@@ -155,6 +159,29 @@ fails the build if any of them drifts.
 | `suncokret.irradiance` | Transposition onto a plane, with beam and diffuse shaded apart |
 
 ## Verification
+
+### One number that was wrong for a while
+
+The interface once showed a roof keeping **0.91** of its irradiance and ranked
+**1 of 777** in the district at the same time. The district median is 0.995, so a
+roof at 0.91 cannot be the best one. Both numbers came from the same bundle and
+both could not be true.
+
+The cause was a guard written `x / y if y > 0 else 1.0`. A flat plane has no
+azimuth, `roofs.py` records that as NaN on purpose, the NaN reached the incidence
+term, and `NaN > 0` is false, so the fallback read a missing denominator as
+**nothing was lost**. 327 of the 777 planes scored a perfect 1.0 and sorted above
+every roof that really was open.
+
+Fixing it made the district worse, which is the point. Mean kept is **0.9335**
+and the tenth percentile **0.7605**, both from `data/survey/district_build.json`.
+The figures before the fix were about 0.97 and 0.91; those two cannot be
+regenerated, because the code that produced them was the bug. The guard now
+raises instead of flattering, a regression test covers the NaN path, and an
+integrity test asserts the invariant on the committed bundle.
+
+I did not find this by testing. I found it by looking at the running page and
+noticing two numbers that contradicted each other.
 
 ### What has been measured
 
