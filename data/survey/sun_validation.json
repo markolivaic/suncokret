@@ -1,0 +1,148 @@
+{
+  "generated_by": "scripts/validate_sun.py",
+  "generated_on": "2026-08-19",
+  "machine": "Windows AMD64, Python 3.12.1",
+  "reference": {
+    "source": "PVGIS H_sun, the sun elevation PVGIS itself used",
+    "file": "zagreb-2020.json",
+    "radiation_db": "PVGIS-SARAH3",
+    "latitude": 45.815,
+    "longitude": 15.9819
+  },
+  "note": "daylight hours only, since PVGIS reports zero rather than a negative elevation at night",
+  "at_pvgis_timestamp": {
+    "offset_minutes": 0,
+    "hours_compared": 4289,
+    "rms_deg": 0.203613,
+    "max_abs_deg": 0.425135,
+    "mean_bias_deg": -0.0512
+  },
+  "best_offset": {
+    "offset_minutes": 0,
+    "hours_compared": 4289,
+    "rms_deg": 0.203613,
+    "max_abs_deg": 0.425135,
+    "mean_bias_deg": -0.0512
+  },
+  "all_offsets": [
+    {
+      "offset_minutes": -40,
+      "hours_compared": 4289,
+      "rms_deg": 5.388158,
+      "max_abs_deg": 7.360271,
+      "mean_bias_deg": -0.409712
+    },
+    {
+      "offset_minutes": -35,
+      "hours_compared": 4289,
+      "rms_deg": 4.727086,
+      "max_abs_deg": 6.490772,
+      "mean_bias_deg": -0.32555
+    },
+    {
+      "offset_minutes": -30,
+      "hours_compared": 4289,
+      "rms_deg": 4.065594,
+      "max_abs_deg": 5.62074,
+      "mean_bias_deg": -0.252597
+    },
+    {
+      "offset_minutes": -25,
+      "hours_compared": 4289,
+      "rms_deg": 3.403856,
+      "max_abs_deg": 4.750389,
+      "mean_bias_deg": -0.190873
+    },
+    {
+      "offset_minutes": -20,
+      "hours_compared": 4289,
+      "rms_deg": 2.74213,
+      "max_abs_deg": 3.879933,
+      "mean_bias_deg": -0.140396
+    },
+    {
+      "offset_minutes": -15,
+      "hours_compared": 4289,
+      "rms_deg": 2.080888,
+      "max_abs_deg": 3.010316,
+      "mean_bias_deg": -0.10118
+    },
+    {
+      "offset_minutes": -10,
+      "hours_compared": 4289,
+      "rms_deg": 1.421319,
+      "max_abs_deg": 2.142511,
+      "mean_bias_deg": -0.073238
+    },
+    {
+      "offset_minutes": -5,
+      "hours_compared": 4289,
+      "rms_deg": 0.768394,
+      "max_abs_deg": 1.275876,
+      "mean_bias_deg": -0.056576
+    },
+    {
+      "offset_minutes": 0,
+      "hours_compared": 4289,
+      "rms_deg": 0.203613,
+      "max_abs_deg": 0.425135,
+      "mean_bias_deg": -0.0512
+    },
+    {
+      "offset_minutes": 5,
+      "hours_compared": 4289,
+      "rms_deg": 0.610971,
+      "max_abs_deg": 1.071603,
+      "mean_bias_deg": -0.057111
+    },
+    {
+      "offset_minutes": 10,
+      "hours_compared": 4289,
+      "rms_deg": 1.259163,
+      "max_abs_deg": 1.935077,
+      "mean_bias_deg": -0.074307
+    },
+    {
+      "offset_minutes": 15,
+      "hours_compared": 4289,
+      "rms_deg": 1.917598,
+      "max_abs_deg": 2.807321,
+      "mean_bias_deg": -0.102785
+    },
+    {
+      "offset_minutes": 20,
+      "hours_compared": 4289,
+      "rms_deg": 2.578178,
+      "max_abs_deg": 3.679361,
+      "mean_bias_deg": -0.142535
+    },
+    {
+      "offset_minutes": 25,
+      "hours_compared": 4289,
+      "rms_deg": 3.239308,
+      "max_abs_deg": 4.550987,
+      "mean_bias_deg": -0.193547
+    },
+    {
+      "offset_minutes": 30,
+      "hours_compared": 4289,
+      "rms_deg": 3.900413,
+      "max_abs_deg": 5.42199,
+      "mean_bias_deg": -0.255807
+    },
+    {
+      "offset_minutes": 35,
+      "hours_compared": 4289,
+      "rms_deg": 4.561202,
+      "max_abs_deg": 6.292163,
+      "mean_bias_deg": -0.329296
+    },
+    {
+      "offset_minutes": 40,
+      "hours_compared": 4289,
+      "rms_deg": 5.221485,
+      "max_abs_deg": 7.162267,
+      "mean_bias_deg": -0.413995
+    }
+  ]
+}

@@ -1,0 +1,1114 @@
+{
+  "generated_by": "scripts/build_district.py",
+  "generated_on": "2026-09-09",
+  "district": "kaptol-donji-grad",
+  "title": "Kaptol and Donji grad",
+  "note": "Trg bana Jelacica, Jurisiceva, and the blocks down to Zrinjevac",
+  "centre": {
+    "lat": 45.8122,
+    "lon": 15.9787
+  },
+  "radius_m": 130.0,
+  "context_m": 50.0,
+  "crs": "EPSG:3765 (HTRS96 / Croatia TM)",
+  "quantisation": {
+    "extent_m": 201.9391034982982,
+    "scale": 32767.0
+  },
+  "counts": {
+    "buildings_loaded": 2327,
+    "faces_rendered": 23407,
+    "triangles": 48268,
+    "selectable_planes": 777,
+    "simplified_buildings": 907,
+    "wkb_repaired": 0
+  },
+  "sweep": {
+    "dates": [
+      "21 December",
+      "21 March",
+      "21 June"
+    ],
+    "start_hour": 4.0,
+    "end_hour": 21.0,
+    "step_minutes": 20,
+    "steps": 52,
+    "bytes_per_state": 2926,
+    "encoding": "one bit per rendered face, little-endian, 1 means lit",
+    "sun": [
+      {
+        "date": 0,
+        "step": 0,
+        "elevation": -36.219,
+        "azimuth": 87.354
+      },
+      {
+        "date": 0,
+        "step": 1,
+        "elevation": -32.736,
+        "azimuth": 90.974
+      },
+      {
+        "date": 0,
+        "step": 2,
+        "elevation": -29.257,
+        "azimuth": 94.46
+      },
+      {
+        "date": 0,
+        "step": 3,
+        "elevation": -25.794,
+        "azimuth": 97.851
+      },
+      {
+        "date": 0,
+        "step": 4,
+        "elevation": -22.358,
+        "azimuth": 101.179
+      },
+      {
+        "date": 0,
+        "step": 5,
+        "elevation": -18.962,
+        "azimuth": 104.472
+      },
+      {
+        "date": 0,
+        "step": 6,
+        "elevation": -15.615,
+        "azimuth": 107.756
+      },
+      {
+        "date": 0,
+        "step": 7,
+        "elevation": -12.33,
+        "azimuth": 111.053
+      },
+      {
+        "date": 0,
+        "step": 8,
+        "elevation": -9.117,
+        "azimuth": 114.384
+      },
+      {
+        "date": 0,
+        "step": 9,
+        "elevation": -5.988,
+        "azimuth": 117.766
+      },
+      {
+        "date": 0,
+        "step": 10,
+        "elevation": -2.956,
+        "azimuth": 121.217
+      },
+      {
+        "date": 0,
+        "step": 11,
+        "elevation": -0.033,
+        "azimuth": 124.753
+      },
+      {
+        "date": 0,
+        "step": 12,
+        "elevation": 2.764,
+        "azimuth": 128.387
+      },
+      {
+        "date": 0,
+        "step": 13,
+        "elevation": 5.423,
+        "azimuth": 132.134
+      },
+      {
+        "date": 0,
+        "step": 14,
+        "elevation": 7.926,
+        "azimuth": 136.002
+      },
+      {
+        "date": 0,
+        "step": 15,
+        "elevation": 10.257,
+        "azimuth": 140.002
+      },
+      {
+        "date": 0,
+        "step": 16,
+        "elevation": 12.399,
+        "azimuth": 144.138
+      },
+      {
+        "date": 0,
+        "step": 17,
+        "elevation": 14.333,
+        "azimuth": 148.411
+      },
+      {
+        "date": 0,
+        "step": 18,
+        "elevation": 16.043,
+        "azimuth": 152.821
+      },
+      {
+        "date": 0,
+        "step": 19,
+        "elevation": 17.51,
+        "azimuth": 157.359
+      },
+      {
+        "date": 0,
+        "step": 20,
+        "elevation": 18.72,
+        "azimuth": 162.013
+      },
+      {
+        "date": 0,
+        "step": 21,
+        "elevation": 19.658,
+        "azimuth": 166.766
+      },
+      {
+        "date": 0,
+        "step": 22,
+        "elevation": 20.312,
+        "azimuth": 171.596
+      },
+      {
+        "date": 0,
+        "step": 23,
+        "elevation": 20.674,
+        "azimuth": 176.476
+      },
+      {
+        "date": 0,
+        "step": 24,
+        "elevation": 20.739,
+        "azimuth": 181.378
+      },
+      {
+        "date": 0,
+        "step": 25,
+        "elevation": 20.507,
+        "azimuth": 186.272
+      },
+      {
+        "date": 0,
+        "step": 26,
+        "elevation": 19.98,
+        "azimuth": 191.127
+      },
+      {
+        "date": 0,
+        "step": 27,
+        "elevation": 19.165,
+        "azimuth": 195.917
+      },
+      {
+        "date": 0,
+        "step": 28,
+        "elevation": 18.073,
+        "azimuth": 200.617
+      },
+      {
+        "date": 0,
+        "step": 29,
+        "elevation": 16.716,
+        "azimuth": 205.207
+      },
+      {
+        "date": 0,
+        "step": 30,
+        "elevation": 15.11,
+        "azimuth": 209.674
+      },
+      {
+        "date": 0,
+        "step": 31,
+        "elevation": 13.272,
+        "azimuth": 214.008
+      },
+      {
+        "date": 0,
+        "step": 32,
+        "elevation": 11.219,
+        "azimuth": 218.204
+      },
+      {
+        "date": 0,
+        "step": 33,
+        "elevation": 8.969,
+        "azimuth": 222.263
+      },
+      {
+        "date": 0,
+        "step": 34,
+        "elevation": 6.539,
+        "azimuth": 226.188
+      },
+      {
+        "date": 0,
+        "step": 35,
+        "elevation": 3.947,
+        "azimuth": 229.987
+      },
+      {
+        "date": 0,
+        "step": 36,
+        "elevation": 1.208,
+        "azimuth": 233.669
+      },
+      {
+        "date": 0,
+        "step": 37,
+        "elevation": -1.662,
+        "azimuth": 237.246
+      },
+      {
+        "date": 0,
+        "step": 38,
+        "elevation": -4.647,
+        "azimuth": 240.732
+      },
+      {
+        "date": 0,
+        "step": 39,
+        "elevation": -7.735,
+        "azimuth": 244.143
+      },
+      {
+        "date": 0,
+        "step": 40,
+        "elevation": -10.913,
+        "azimuth": 247.494
+      },
+      {
+        "date": 0,
+        "step": 41,
+        "elevation": -14.168,
+        "azimuth": 250.803
+      },
+      {
+        "date": 0,
+        "step": 42,
+        "elevation": -17.49,
+        "azimuth": 254.09
+      },
+      {
+        "date": 0,
+        "step": 43,
+        "elevation": -20.866,
+        "azimuth": 257.377
+      },
+      {
+        "date": 0,
+        "step": 44,
+        "elevation": -24.285,
+        "azimuth": 260.686
+      },
+      {
+        "date": 0,
+        "step": 45,
+        "elevation": -27.738,
+        "azimuth": 264.046
+      },
+      {
+        "date": 0,
+        "step": 46,
+        "elevation": -31.211,
+        "azimuth": 267.485
+      },
+      {
+        "date": 0,
+        "step": 47,
+        "elevation": -34.694,
+        "azimuth": 271.041
+      },
+      {
+        "date": 0,
+        "step": 48,
+        "elevation": -38.173,
+        "azimuth": 274.757
+      },
+      {
+        "date": 0,
+        "step": 49,
+        "elevation": -41.633,
+        "azimuth": 278.683
+      },
+      {
+        "date": 0,
+        "step": 50,
+        "elevation": -45.054,
+        "azimuth": 282.883
+      },
+      {
+        "date": 0,
+        "step": 51,
+        "elevation": -48.417,
+        "azimuth": 287.437
+      },
+      {
+        "date": 1,
+        "step": 0,
+        "elevation": -20.618,
+        "azimuth": 66.595
+      },
+      {
+        "date": 1,
+        "step": 1,
+        "elevation": -17.369,
+        "azimuth": 70.616
+      },
+      {
+        "date": 1,
+        "step": 2,
+        "elevation": -14.039,
+        "azimuth": 74.493
+      },
+      {
+        "date": 1,
+        "step": 3,
+        "elevation": -10.648,
+        "azimuth": 78.256
+      },
+      {
+        "date": 1,
+        "step": 4,
+        "elevation": -7.211,
+        "azimuth": 81.934
+      },
+      {
+        "date": 1,
+        "step": 5,
+        "elevation": -3.743,
+        "azimuth": 85.553
+      },
+      {
+        "date": 1,
+        "step": 6,
+        "elevation": -0.257,
+        "azimuth": 89.142
+      },
+      {
+        "date": 1,
+        "step": 7,
+        "elevation": 3.232,
+        "azimuth": 92.727
+      },
+      {
+        "date": 1,
+        "step": 8,
+        "elevation": 6.71,
+        "azimuth": 96.334
+      },
+      {
+        "date": 1,
+        "step": 9,
+        "elevation": 10.164,
+        "azimuth": 99.991
+      },
+      {
+        "date": 1,
+        "step": 10,
+        "elevation": 13.579,
+        "azimuth": 103.725
+      },
+      {
+        "date": 1,
+        "step": 11,
+        "elevation": 16.939,
+        "azimuth": 107.565
+      },
+      {
+        "date": 1,
+        "step": 12,
+        "elevation": 20.227,
+        "azimuth": 111.54
+      },
+      {
+        "date": 1,
+        "step": 13,
+        "elevation": 23.425,
+        "azimuth": 115.683
+      },
+      {
+        "date": 1,
+        "step": 14,
+        "elevation": 26.511,
+        "azimuth": 120.025
+      },
+      {
+        "date": 1,
+        "step": 15,
+        "elevation": 29.462,
+        "azimuth": 124.599
+      },
+      {
+        "date": 1,
+        "step": 16,
+        "elevation": 32.249,
+        "azimuth": 129.436
+      },
+      {
+        "date": 1,
+        "step": 17,
+        "elevation": 34.845,
+        "azimuth": 134.567
+      },
+      {
+        "date": 1,
+        "step": 18,
+        "elevation": 37.214,
+        "azimuth": 140.014
+      },
+      {
+        "date": 1,
+        "step": 19,
+        "elevation": 39.322,
+        "azimuth": 145.792
+      },
+      {
+        "date": 1,
+        "step": 20,
+        "elevation": 41.131,
+        "azimuth": 151.901
+      },
+      {
+        "date": 1,
+        "step": 21,
+        "elevation": 42.604,
+        "azimuth": 158.32
+      },
+      {
+        "date": 1,
+        "step": 22,
+        "elevation": 43.706,
+        "azimuth": 165.009
+      },
+      {
+        "date": 1,
+        "step": 23,
+        "elevation": 44.41,
+        "azimuth": 171.901
+      },
+      {
+        "date": 1,
+        "step": 24,
+        "elevation": 44.695,
+        "azimuth": 178.909
+      },
+      {
+        "date": 1,
+        "step": 25,
+        "elevation": 44.553,
+        "azimuth": 185.935
+      },
+      {
+        "date": 1,
+        "step": 26,
+        "elevation": 43.988,
+        "azimuth": 192.876
+      },
+      {
+        "date": 1,
+        "step": 27,
+        "elevation": 43.017,
+        "azimuth": 199.641
+      },
+      {
+        "date": 1,
+        "step": 28,
+        "elevation": 41.666,
+        "azimuth": 206.157
+      },
+      {
+        "date": 1,
+        "step": 29,
+        "elevation": 39.966,
+        "azimuth": 212.374
+      },
+      {
+        "date": 1,
+        "step": 30,
+        "elevation": 37.955,
+        "azimuth": 218.264
+      },
+      {
+        "date": 1,
+        "step": 31,
+        "elevation": 35.671,
+        "azimuth": 223.823
+      },
+      {
+        "date": 1,
+        "step": 32,
+        "elevation": 33.15,
+        "azimuth": 229.059
+      },
+      {
+        "date": 1,
+        "step": 33,
+        "elevation": 30.425,
+        "azimuth": 233.994
+      },
+      {
+        "date": 1,
+        "step": 34,
+        "elevation": 27.529,
+        "azimuth": 238.655
+      },
+      {
+        "date": 1,
+        "step": 35,
+        "elevation": 24.489,
+        "azimuth": 243.074
+      },
+      {
+        "date": 1,
+        "step": 36,
+        "elevation": 21.329,
+        "azimuth": 247.284
+      },
+      {
+        "date": 1,
+        "step": 37,
+        "elevation": 18.073,
+        "azimuth": 251.316
+      },
+      {
+        "date": 1,
+        "step": 38,
+        "elevation": 14.74,
+        "azimuth": 255.202
+      },
+      {
+        "date": 1,
+        "step": 39,
+        "elevation": 11.347,
+        "azimuth": 258.974
+      },
+      {
+        "date": 1,
+        "step": 40,
+        "elevation": 7.91,
+        "azimuth": 262.659
+      },
+      {
+        "date": 1,
+        "step": 41,
+        "elevation": 4.445,
+        "azimuth": 266.287
+      },
+      {
+        "date": 1,
+        "step": 42,
+        "elevation": 0.966,
+        "azimuth": 269.883
+      },
+      {
+        "date": 1,
+        "step": 43,
+        "elevation": -2.514,
+        "azimuth": 273.475
+      },
+      {
+        "date": 1,
+        "step": 44,
+        "elevation": -5.981,
+        "azimuth": 277.09
+      },
+      {
+        "date": 1,
+        "step": 45,
+        "elevation": -9.42,
+        "azimuth": 280.754
+      },
+      {
+        "date": 1,
+        "step": 46,
+        "elevation": -12.817,
+        "azimuth": 284.495
+      },
+      {
+        "date": 1,
+        "step": 47,
+        "elevation": -16.156,
+        "azimuth": 288.34
+      },
+      {
+        "date": 1,
+        "step": 48,
+        "elevation": -19.42,
+        "azimuth": 292.32
+      },
+      {
+        "date": 1,
+        "step": 49,
+        "elevation": -22.59,
+        "azimuth": 296.464
+      },
+      {
+        "date": 1,
+        "step": 50,
+        "elevation": -25.645,
+        "azimuth": 300.802
+      },
+      {
+        "date": 1,
+        "step": 51,
+        "elevation": -28.561,
+        "azimuth": 305.367
+      },
+      {
+        "date": 2,
+        "step": 0,
+        "elevation": -9.372,
+        "azimuth": 41.57
+      },
+      {
+        "date": 2,
+        "step": 1,
+        "elevation": -6.972,
+        "azimuth": 45.519
+      },
+      {
+        "date": 2,
+        "step": 2,
+        "elevation": -4.406,
+        "azimuth": 49.339
+      },
+      {
+        "date": 2,
+        "step": 3,
+        "elevation": -1.69,
+        "azimuth": 53.042
+      },
+      {
+        "date": 2,
+        "step": 4,
+        "elevation": 1.158,
+        "azimuth": 56.637
+      },
+      {
+        "date": 2,
+        "step": 5,
+        "elevation": 4.125,
+        "azimuth": 60.138
+      },
+      {
+        "date": 2,
+        "step": 6,
+        "elevation": 7.197,
+        "azimuth": 63.561
+      },
+      {
+        "date": 2,
+        "step": 7,
+        "elevation": 10.361,
+        "azimuth": 66.922
+      },
+      {
+        "date": 2,
+        "step": 8,
+        "elevation": 13.605,
+        "azimuth": 70.238
+      },
+      {
+        "date": 2,
+        "step": 9,
+        "elevation": 16.916,
+        "azimuth": 73.528
+      },
+      {
+        "date": 2,
+        "step": 10,
+        "elevation": 20.284,
+        "azimuth": 76.813
+      },
+      {
+        "date": 2,
+        "step": 11,
+        "elevation": 23.698,
+        "azimuth": 80.118
+      },
+      {
+        "date": 2,
+        "step": 12,
+        "elevation": 27.146,
+        "azimuth": 83.467
+      },
+      {
+        "date": 2,
+        "step": 13,
+        "elevation": 30.618,
+        "azimuth": 86.892
+      },
+      {
+        "date": 2,
+        "step": 14,
+        "elevation": 34.101,
+        "azimuth": 90.426
+      },
+      {
+        "date": 2,
+        "step": 15,
+        "elevation": 37.582,
+        "azimuth": 94.111
+      },
+      {
+        "date": 2,
+        "step": 16,
+        "elevation": 41.046,
+        "azimuth": 97.998
+      },
+      {
+        "date": 2,
+        "step": 17,
+        "elevation": 44.477,
+        "azimuth": 102.148
+      },
+      {
+        "date": 2,
+        "step": 18,
+        "elevation": 47.851,
+        "azimuth": 106.636
+      },
+      {
+        "date": 2,
+        "step": 19,
+        "elevation": 51.144,
+        "azimuth": 111.557
+      },
+      {
+        "date": 2,
+        "step": 20,
+        "elevation": 54.32,
+        "azimuth": 117.027
+      },
+      {
+        "date": 2,
+        "step": 21,
+        "elevation": 57.335,
+        "azimuth": 123.188
+      },
+      {
+        "date": 2,
+        "step": 22,
+        "elevation": 60.13,
+        "azimuth": 130.204
+      },
+      {
+        "date": 2,
+        "step": 23,
+        "elevation": 62.629,
+        "azimuth": 138.246
+      },
+      {
+        "date": 2,
+        "step": 24,
+        "elevation": 64.736,
+        "azimuth": 147.45
+      },
+      {
+        "date": 2,
+        "step": 25,
+        "elevation": 66.34,
+        "azimuth": 157.844
+      },
+      {
+        "date": 2,
+        "step": 26,
+        "elevation": 67.329,
+        "azimuth": 169.247
+      },
+      {
+        "date": 2,
+        "step": 27,
+        "elevation": 67.62,
+        "azimuth": 181.214
+      },
+      {
+        "date": 2,
+        "step": 28,
+        "elevation": 67.184,
+        "azimuth": 193.115
+      },
+      {
+        "date": 2,
+        "step": 29,
+        "elevation": 66.062,
+        "azimuth": 204.342
+      },
+      {
+        "date": 2,
+        "step": 30,
+        "elevation": 64.348,
+        "azimuth": 214.502
+      },
+      {
+        "date": 2,
+        "step": 31,
+        "elevation": 62.153,
+        "azimuth": 223.465
+      },
+      {
+        "date": 2,
+        "step": 32,
+        "elevation": 59.587,
+        "azimuth": 231.286
+      },
+      {
+        "date": 2,
+        "step": 33,
+        "elevation": 56.742,
+        "azimuth": 238.116
+      },
+      {
+        "date": 2,
+        "step": 34,
+        "elevation": 53.691,
+        "azimuth": 244.125
+      },
+      {
+        "date": 2,
+        "step": 35,
+        "elevation": 50.488,
+        "azimuth": 249.474
+      },
+      {
+        "date": 2,
+        "step": 36,
+        "elevation": 47.176,
+        "azimuth": 254.299
+      },
+      {
+        "date": 2,
+        "step": 37,
+        "elevation": 43.788,
+        "azimuth": 258.712
+      },
+      {
+        "date": 2,
+        "step": 38,
+        "elevation": 40.349,
+        "azimuth": 262.803
+      },
+      {
+        "date": 2,
+        "step": 39,
+        "elevation": 36.88,
+        "azimuth": 266.645
+      },
+      {
+        "date": 2,
+        "step": 40,
+        "elevation": 33.397,
+        "azimuth": 270.296
+      },
+      {
+        "date": 2,
+        "step": 41,
+        "elevation": 29.916,
+        "azimuth": 273.805
+      },
+      {
+        "date": 2,
+        "step": 42,
+        "elevation": 26.448,
+        "azimuth": 277.211
+      },
+      {
+        "date": 2,
+        "step": 43,
+        "elevation": 23.005,
+        "azimuth": 280.549
+      },
+      {
+        "date": 2,
+        "step": 44,
+        "elevation": 19.6,
+        "azimuth": 283.848
+      },
+      {
+        "date": 2,
+        "step": 45,
+        "elevation": 16.242,
+        "azimuth": 287.133
+      },
+      {
+        "date": 2,
+        "step": 46,
+        "elevation": 12.944,
+        "azimuth": 290.427
+      },
+      {
+        "date": 2,
+        "step": 47,
+        "elevation": 9.715,
+        "azimuth": 293.75
+      },
+      {
+        "date": 2,
+        "step": 48,
+        "elevation": 6.569,
+        "azimuth": 297.121
+      },
+      {
+        "date": 2,
+        "step": 49,
+        "elevation": 3.517,
+        "azimuth": 300.559
+      },
+      {
+        "date": 2,
+        "step": 50,
+        "elevation": 0.572,
+        "azimuth": 304.078
+      },
+      {
+        "date": 2,
+        "step": 51,
+        "elevation": -2.251,
+        "azimuth": 307.694
+      }
+    ]
+  },
+  "ground": {
+    "cells": 192,
+    "cell_m": 2.0585415880356472,
+    "size_m": 395.2399849028443,
+    "x0_m": -201.93910349824,
+    "y0_m": -196.674062714912,
+    "z_m": 121.2466,
+    "march_m": 250.0,
+    "raster_cell_m": 2.0585415880356472,
+    "bytes_per_state": 4608,
+    "encoding": "one bit per ground cell, little-endian, 1 means the sun reaches it",
+    "note": "one level plane at the median building base. ZG3D models buildings, not terrain, so the ground here is an assumption and not a measurement."
+  },
+  "horizon": {
+    "bins": 720,
+    "encoding": "uint8, half a degree per step, 0 means open sky",
+    "radius_m": 250.0,
+    "height_field_m": 1.0
+  },
+  "irradiance": {
+    "source": "PVGIS seriescalc, horizontal plane, components split",
+    "radiation_db": "PVGIS-SARAH3",
+    "hours": 8784,
+    "start_unix": 1577837400.0,
+    "step_seconds": 3600,
+    "latitude": 45.815,
+    "longitude": 15.9819,
+    "ground_albedo": 0.2,
+    "note": "planePoa is plane-of-array irradiance in kWh/m2/year, which is sunlight arriving on a surface. It is not electricity and this project never converts it into electricity."
+  },
+  "buffers": {
+    "positions": {
+      "offset": 0,
+      "length": 868824,
+      "dtype": "int16",
+      "count": 434412
+    },
+    "planeOfTriangle": {
+      "offset": 868824,
+      "length": 193072,
+      "dtype": "int32",
+      "count": 48268
+    },
+    "planeTilt": {
+      "offset": 1061896,
+      "length": 93628,
+      "dtype": "float32",
+      "count": 23407
+    },
+    "planeAzimuth": {
+      "offset": 1155524,
+      "length": 93628,
+      "dtype": "float32",
+      "count": 23407
+    },
+    "planeArea": {
+      "offset": 1249152,
+      "length": 93628,
+      "dtype": "float32",
+      "count": 23407
+    },
+    "planeBuilding": {
+      "offset": 1342780,
+      "length": 93628,
+      "dtype": "int32",
+      "count": 23407
+    },
+    "planeFlags": {
+      "offset": 1436408,
+      "length": 23407,
+      "dtype": "uint8",
+      "count": 23407
+    },
+    "selectablePlane": {
+      "offset": 1459816,
+      "length": 3108,
+      "dtype": "int32",
+      "count": 777
+    },
+    "selectableKept": {
+      "offset": 1462924,
+      "length": 3108,
+      "dtype": "float32",
+      "count": 777
+    },
+    "selectableBeamKept": {
+      "offset": 1466032,
+      "length": 3108,
+      "dtype": "float32",
+      "count": 777
+    },
+    "selectableSkyKept": {
+      "offset": 1469140,
+      "length": 3108,
+      "dtype": "float32",
+      "count": 777
+    },
+    "selectablePoa": {
+      "offset": 1472248,
+      "length": 3108,
+      "dtype": "float32",
+      "count": 777
+    },
+    "horizons": {
+      "offset": 1475356,
+      "length": 559440,
+      "dtype": "uint8",
+      "count": 559440
+    },
+    "litStates": {
+      "offset": 2034796,
+      "length": 456456,
+      "dtype": "uint8",
+      "count": 456456
+    },
+    "groundStates": {
+      "offset": 2491252,
+      "length": 718848,
+      "dtype": "uint8",
+      "count": 718848
+    },
+    "hourlyBeamHorizontal": {
+      "offset": 3210100,
+      "length": 35136,
+      "dtype": "float32",
+      "count": 8784
+    },
+    "hourlyDiffuseHorizontal": {
+      "offset": 3245236,
+      "length": 35136,
+      "dtype": "float32",
+      "count": 8784
+    }
+  },
+  "bin": "kaptol-donji-grad.bin",
+  "bin_bytes": 3280372,
+  "bin_sha256": "c105081b491ddbdcdc6b4b358ec790ebc9c81e59a7268150ce558721c8efe899"
+}

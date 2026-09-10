@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>suncokret, rooftop shadow study, Zagreb</title>
+    <meta
+      name="description"
+      content="A shadow study of real Zagreb roof planes from the ZG3D city model, with inter-building shading. Simulation and physics, no model is trained and none runs."
+    />
+  </head>
+  <body>
+    <div class="sheet">
+      <header class="titleblock">
+        <h1>suncokret</h1>
+        <p class="sheettitle">shadow study, sheet 01</p>
+        <p class="meta" id="meta">loading the district&hellip;</p>
+        <svg class="north" viewBox="0 0 38 38" aria-label="north arrow">
+          <circle cx="19" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1" />
+          <path d="M19 6 L23.5 24 L19 20.5 L14.5 24 Z" fill="currentColor" />
+          <text x="19" y="36" text-anchor="middle" font-size="8">N</text>
+        </svg>
+      </header>
+
+      <div class="keys">
+        <span class="k"><i class="sw sun"></i> roof plane in sun</span>
+        <span class="k"><i class="sw shade"></i> in shadow</span>
+        <span class="k"><i class="sw simp"></i> hatched: 2008 capture, one roof plane for the whole building</span>
+        <span class="k"><i class="sw ground"></i> ground, shadowed and in sun</span>
+        <p class="say">
+          <b>No model is trained and none runs.</b> This is shadow geometry and
+          irradiance bookkeeping over the city's own 3D model. There is no ground
+          truth: nobody publishes per-roof generation for Zagreb, so nothing here
+          has been checked against a real installation. Two roofs are comparable
+          with each other because both come from the same pipeline.
+          <b>An absolute figure in kWh of electricity is not, and this page never shows one.</b>
+        </p>
+      </div>
+
+      <div class="study" id="study">
+        <div class="corner"></div>
+        <div class="colhead" data-col="0">09:00</div>
+        <div class="colhead" data-col="1">12:00</div>
+        <div class="colhead" data-col="2">15:00</div>
+
+        <div class="rowhead" data-row="0">21 December</div>
+        <div class="cell" data-cell="0"><span class="cellmeta"></span></div>
+        <div class="cell" data-cell="1"><span class="cellmeta"></span></div>
+        <div class="cell" data-cell="2"><span class="cellmeta"></span></div>
+
+        <div class="rowhead" data-row="1">21 March</div>
+        <div class="cell" data-cell="3"><span class="cellmeta"></span></div>
+        <div class="cell" data-cell="4"><span class="cellmeta"></span></div>
+        <div class="cell" data-cell="5"><span class="cellmeta"></span></div>
+
+        <div class="rowhead" data-row="2">21 June</div>
+        <div class="cell" data-cell="6"><span class="cellmeta"></span></div>
+        <div class="cell" data-cell="7"><span class="cellmeta"></span></div>
+        <div class="cell" data-cell="8"><span class="cellmeta"></span></div>
+      </div>
+
+      <canvas id="scene"></canvas>
+
+      <div class="scrub">
+        <button id="play" type="button">&#9654;&nbsp; play</button>
+        <label class="lab" for="time">sweep the day</label>
+        <input id="time" type="range" min="0" max="51" value="24" step="1" />
+        <span class="lab" id="clock">12:00</span>
+        <span class="lab dim">all nine views move together</span>
+      </div>
+
+      <section class="roofline">
+        <div>
+          <h2 id="roofName">Pick a roof plane</h2>
+          <p class="sub" id="roofSub">
+            Click any roof in the drawing above. Its whole year appears below.
+          </p>
+        </div>
+        <div class="facts" id="facts"></div>
+      </section>
+
+      <div class="carpetwrap">
+        <div class="hours"><span>24</span><span>18</span><span>12</span><span>06</span><span>00</span></div>
+        <canvas id="carpet" width="1200" height="208"></canvas>
+        <div class="months">
+          <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+          <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+        </div>
+        <p class="caption" id="caption">
+          Day of year across, hour of day up. The nine views are three columns out of this.
+        </p>
+      </div>
+
+      <footer class="colophon" id="colophon"></footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+*.egg-info/
+
+# Raw upstream downloads. Large, regenerable, never committed.
+# scripts/fetch_zg3d.py rebuilds this directory from data.zagreb.hr.
+data/raw/
+
+# Derived from data/raw by scripts/survey_roofs.py. Large and regenerable; the
+# committed artefact is the summary JSON next to it, which is what the README
+# cites. Regenerate with: python scripts/survey_roofs.py
+data/survey/_chunks/
+data/survey/roof_index.npz
+
+# Scratch output from the walkthrough recorder. The finished media under
+# docs/walkthrough/ is committed, whatever the recorder leaves behind is not.
+docs/walkthrough-frames/

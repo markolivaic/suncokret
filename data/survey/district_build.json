@@ -1,0 +1,52 @@
+{
+  "generated_by": "scripts/build_district.py",
+  "generated_on": "2026-09-09",
+  "machine": "Windows AMD64, Python 3.12.1",
+  "district": "kaptol-donji-grad",
+  "timing_s": {
+    "note": "the horizon pass covers every drawn face because the drawing shades all of them; the irradiance pass covers only the planes a reader can select, so the two are reported per their own population rather than divided into each other",
+    "load": 2.04,
+    "blockers": 0.63,
+    "horizons": 112.29,
+    "ground_raster": 2.0,
+    "horizon_per_face_ms": 4.797,
+    "irradiance": 0.62,
+    "irradiance_per_plane_ms": 0.802
+  },
+  "counts": {
+    "buildings_loaded": 2327,
+    "faces_rendered": 23407,
+    "triangles": 48268,
+    "selectable_planes": 777,
+    "simplified_buildings": 907,
+    "wkb_repaired": 0
+  },
+  "bundle_bytes": {
+    "bin": 3280372
+  },
+  "ground": {
+    "cells": 192,
+    "cell_m": 2.059,
+    "size_m": 395.2,
+    "z_m": 121.25
+  },
+  "kept_distribution": {
+    "planes": 777,
+    "mean": 0.9335,
+    "p10": 0.7605,
+    "median": 0.9796,
+    "worst": 0.5712
+  },
+  "beam_kept_distribution": {
+    "mean": 0.9428,
+    "worst": 0.553
+  },
+  "single_sample_penalty": {
+    "planes_checked": 200,
+    "note": "bundle value minus five-sample value; positive means the single centroid sample reports a roof as less shaded than it is",
+    "kept_mean_difference": 0.00058,
+    "kept_max_difference": 0.01985,
+    "beam_kept_mean_difference": 0.00055,
+    "beam_kept_max_difference": 0.02888
+  }
+}

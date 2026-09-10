@@ -1,0 +1,186 @@
+{
+  "generated_by": "scripts/survey_roofs.py",
+  "generated_on": "2026-08-19",
+  "machine": "Windows AMD64, Python 3.12.1",
+  "source": {
+    "dataset": "ZG3D 2022 3D model Grada Zagreba, LoD 2.2",
+    "layer": "ZG3D_2022_3d_model_GZ",
+    "crs_source": "EPSG:4326",
+    "crs_computed_in": "EPSG:3765 (HTRS96 / Croatia TM)",
+    "buildings_in_layer": 357683
+  },
+  "thresholds": {
+    "roof_max_tilt_deg": 60.0,
+    "flat_max_tilt_deg": 5.0,
+    "min_trusted_area_m2": 1.0,
+    "min_segment_area_m2": 8.0,
+    "min_building_roof_area_m2": 20.0
+  },
+  "cascade": {
+    "surveyed": 357683,
+    "has_any_face": {
+      "count": 357683,
+      "fraction": 1.0
+    },
+    "has_positive_area_face": {
+      "count": 357683,
+      "fraction": 1.0
+    },
+    "has_roof_face": {
+      "count": 354927,
+      "fraction": 0.992295
+    },
+    "pitch_and_azimuth_recoverable": {
+      "count": 354927,
+      "fraction": 0.992295
+    },
+    "has_pitched_roof_modelling": {
+      "count": 257792,
+      "fraction": 0.720728
+    },
+    "pv_ready": {
+      "count": 231218,
+      "fraction": 0.646433
+    }
+  },
+  "failure_modes": {
+    "no_geometry": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "all_faces_degenerate": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "no_face_survives_tilt_cut": {
+      "count": 2756,
+      "fraction": 0.007705
+    },
+    "roof_below_trusted_area": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "flat_top_only_no_pitched_planes": {
+      "count": 97135,
+      "fraction": 0.271567
+    },
+    "roof_too_small_for_pv": {
+      "count": 123709,
+      "fraction": 0.345862
+    },
+    "wkb_needed_repair": {
+      "count": 671,
+      "fraction": 0.001876
+    },
+    "orientation_undecidable": {
+      "count": 148,
+      "fraction": 0.000414
+    }
+  },
+  "provenance": {
+    "Dron snimanje 2019 (2012)": {
+      "buildings": 10,
+      "share_of_dataset": 2.8e-05,
+      "median_faces_per_building": 14.0,
+      "pitched_roof_fraction": 0.0,
+      "pv_ready_fraction": 1.0
+    },
+    "Dron snimanje 2019 (2019)": {
+      "buildings": 778,
+      "share_of_dataset": 0.002175,
+      "median_faces_per_building": 16.0,
+      "pitched_roof_fraction": 0.767352,
+      "pv_ready_fraction": 0.748072
+    },
+    "Multisenzorsko snimanje (2022)": {
+      "buildings": 161872,
+      "share_of_dataset": 0.452557,
+      "median_faces_per_building": 72.0,
+      "pitched_roof_fraction": 0.816176,
+      "pv_ready_fraction": 0.698713
+    },
+    "Snimanje bespilotnom letjelicom (2019)": {
+      "buildings": 50,
+      "share_of_dataset": 0.00014,
+      "median_faces_per_building": 16.5,
+      "pitched_roof_fraction": 0.7,
+      "pv_ready_fraction": 0.88
+    },
+    "aerofotogrametrijsko snimanje (2008)": {
+      "buildings": 194967,
+      "share_of_dataset": 0.545083,
+      "median_faces_per_building": 6.0,
+      "pitched_roof_fraction": 0.641339,
+      "pv_ready_fraction": 0.602543
+    },
+    "aerofotogrametrijsko snimanje dronom (2019)": {
+      "buildings": 6,
+      "share_of_dataset": 1.7e-05,
+      "median_faces_per_building": 7.5,
+      "pitched_roof_fraction": 0.666667,
+      "pv_ready_fraction": 0.666667
+    }
+  },
+  "degenerate_faces": {
+    "faces_total": 23767453,
+    "faces_positive_area": 15044303,
+    "fraction_zero_area": 0.367021
+  },
+  "area_check_vs_zg3d_sarea_attribute": {
+    "note": "split by closure, because the two populations are not comparable: an open shell is missing its floor, so the dataset's own SArea counts a face that is not in the geometry it ships. On the closed solids this is a straight check of the extraction against the dataset and it is exact",
+    "closed_solids": {
+      "buildings_compared": 163283,
+      "median_relative_error": 2.843e-06,
+      "p99_relative_error": 27.358708101,
+      "within_1_percent": 0.988162
+    },
+    "open_shells": {
+      "buildings_compared": 194324,
+      "median_relative_error": 0.183190018,
+      "p99_relative_error": 0.593425553,
+      "within_1_percent": 0.058418
+    }
+  },
+  "closure_check_vs_zg3d_volume_attribute": {
+    "note": "faces are oriented by the highest non-vertical face, which needs no closed solid; this compares the divergence-theorem volume against the dataset's own Volume purely to say which buildings are closed solids and which are open shells",
+    "buildings_compared": 355816,
+    "closed_solid_fraction": 0.459015,
+    "open_shells": 192491,
+    "median_abs_ratio_closed": 1.0,
+    "median_abs_ratio_open": 14.7603
+  },
+  "tilt_cut_sensitivity_pv_ready": {
+    "cut_45deg": 256405,
+    "cut_60deg": 259677,
+    "cut_75deg": 260078
+  },
+  "best_plane_distribution_pv_ready": {
+    "n": 231218,
+    "flat_fraction": 0.252277,
+    "median_tilt_of_pitched_deg": 28.13,
+    "tilt_percentiles_deg": {
+      "10": 0.0,
+      "25": 4.887,
+      "50": 19.881,
+      "75": 32.04,
+      "90": 37.227
+    },
+    "azimuth_octants_of_pitched": {
+      "N": 28155,
+      "NE": 16484,
+      "E": 28798,
+      "SE": 15064,
+      "S": 26601,
+      "SW": 15611,
+      "W": 27183,
+      "NW": 14991
+    }
+  },
+  "timing": {
+    "wall_clock_s": 261.47,
+    "read_s": 50.81,
+    "buildings_per_s": 1368.0,
+    "note": "cold run only; a resumed run skips completed chunks and is not comparable",
+    "buildings_swept_this_run": 357683
+  }
+}

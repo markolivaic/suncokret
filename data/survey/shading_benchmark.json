@@ -1,0 +1,265 @@
+{
+  "generated_by": "scripts/benchmark_shading.py",
+  "generated_on": "2026-08-19",
+  "machine": "Windows AMD64, Python 3.12.1",
+  "method": {
+    "horizon_azimuth_bins": 720,
+    "blocker_radius_m": 250.0,
+    "edge_densify_m": 2.0,
+    "height_field_m": 1.0,
+    "samples_per_plane": 5,
+    "hours_per_year": 8784,
+    "note": "one horizon profile per sample point, after which the whole year is an array lookup against it"
+  },
+  "districts": [
+    {
+      "district": "donji-grad",
+      "description": "dense 19th century perimeter blocks",
+      "centre": {
+        "lat": 45.8085,
+        "lon": 15.976
+      },
+      "radius_m": 400.0,
+      "buildings_loaded_including_margin": 4255,
+      "buildings_evaluated": 1016,
+      "blocker_points": 267335,
+      "samples_per_plane": 5,
+      "timing_s": {
+        "load": 4.91,
+        "build_blockers": 1.753,
+        "shading": 34.97,
+        "per_building_ms": 34.419,
+        "per_sample_ms": 7.083
+      },
+      "mean_blocker_candidates_per_sample": 53403,
+      "beam_kept_fraction": {
+        "mean": 0.892,
+        "p10": 0.7326,
+        "median": 0.9321,
+        "p90": 1.0,
+        "worst": 0.4861
+      },
+      "sky_view_kept_fraction": {
+        "mean": 0.9154,
+        "p10": 0.7934,
+        "median": 0.9506,
+        "p90": 0.9945,
+        "worst": 0.571
+      },
+      "box_at_ridge_height_error": {
+        "note": "beam kept with a box-at-ridge-height blocker minus beam kept with the modelled roof shape; positive means the box shades less than the real roofs do",
+        "mean_delta": -0.0212,
+        "max_abs_delta": 0.2491,
+        "buildings_over_1pct": 514
+      }
+    },
+    {
+      "district": "tresnjevka",
+      "description": "mixed low-rise and slab housing",
+      "centre": {
+        "lat": 45.802,
+        "lon": 15.945
+      },
+      "radius_m": 400.0,
+      "buildings_loaded_including_margin": 6965,
+      "buildings_evaluated": 1129,
+      "blocker_points": 191531,
+      "samples_per_plane": 5,
+      "timing_s": {
+        "load": 1.963,
+        "build_blockers": 0.912,
+        "shading": 25.525,
+        "per_building_ms": 22.608,
+        "per_sample_ms": 4.526
+      },
+      "mean_blocker_candidates_per_sample": 36549,
+      "beam_kept_fraction": {
+        "mean": 0.9148,
+        "p10": 0.7986,
+        "median": 0.9404,
+        "p90": 1.0,
+        "worst": 0.4998
+      },
+      "sky_view_kept_fraction": {
+        "mean": 0.9568,
+        "p10": 0.9057,
+        "median": 0.9674,
+        "p90": 0.9931,
+        "worst": 0.7151
+      },
+      "box_at_ridge_height_error": {
+        "note": "beam kept with a box-at-ridge-height blocker minus beam kept with the modelled roof shape; positive means the box shades less than the real roofs do",
+        "mean_delta": -0.00726,
+        "max_abs_delta": 0.10313,
+        "buildings_over_1pct": 267
+      }
+    },
+    {
+      "district": "novi-zagreb-travno",
+      "description": "tall socialist-era slabs, widely spaced",
+      "centre": {
+        "lat": 45.776,
+        "lon": 15.984
+      },
+      "radius_m": 400.0,
+      "buildings_loaded_including_margin": 692,
+      "buildings_evaluated": 187,
+      "blocker_points": 50644,
+      "samples_per_plane": 5,
+      "timing_s": {
+        "load": 0.412,
+        "build_blockers": 0.201,
+        "shading": 1.404,
+        "per_building_ms": 7.51,
+        "per_sample_ms": 1.502
+      },
+      "mean_blocker_candidates_per_sample": 6350,
+      "beam_kept_fraction": {
+        "mean": 0.9941,
+        "p10": 1.0,
+        "median": 1.0,
+        "p90": 1.0,
+        "worst": 0.7511
+      },
+      "sky_view_kept_fraction": {
+        "mean": 0.9666,
+        "p10": 0.9247,
+        "median": 0.9873,
+        "p90": 0.9968,
+        "worst": 0.6415
+      },
+      "box_at_ridge_height_error": {
+        "note": "beam kept with a box-at-ridge-height blocker minus beam kept with the modelled roof shape; positive means the box shades less than the real roofs do",
+        "mean_delta": -0.00138,
+        "max_abs_delta": 0.07653,
+        "buildings_over_1pct": 8
+      }
+    },
+    {
+      "district": "sesvete",
+      "description": "near-suburban detached housing",
+      "centre": {
+        "lat": 45.832,
+        "lon": 16.113
+      },
+      "radius_m": 400.0,
+      "buildings_loaded_including_margin": 3643,
+      "buildings_evaluated": 945,
+      "blocker_points": 120141,
+      "samples_per_plane": 5,
+      "timing_s": {
+        "load": 1.459,
+        "build_blockers": 0.572,
+        "shading": 15.789,
+        "per_building_ms": 16.708,
+        "per_sample_ms": 3.343
+      },
+      "mean_blocker_candidates_per_sample": 24793,
+      "beam_kept_fraction": {
+        "mean": 0.9262,
+        "p10": 0.8096,
+        "median": 0.9481,
+        "p90": 1.0,
+        "worst": 0.5427
+      },
+      "sky_view_kept_fraction": {
+        "mean": 0.9719,
+        "p10": 0.9434,
+        "median": 0.9777,
+        "p90": 0.9955,
+        "worst": 0.8164
+      },
+      "box_at_ridge_height_error": {
+        "note": "beam kept with a box-at-ridge-height blocker minus beam kept with the modelled roof shape; positive means the box shades less than the real roofs do",
+        "mean_delta": -0.00677,
+        "max_abs_delta": 0.10574,
+        "buildings_over_1pct": 215
+      }
+    }
+  ],
+  "sensitivity": {
+    "district": "donji-grad",
+    "buildings_sampled": 150,
+    "note": "errors are against the undecimated cloud for resolution, and against a 500 m search for radius",
+    "height_field_resolution": [
+      {
+        "height_field_m": 1.0,
+        "blocker_points": 267335,
+        "per_sample_ms": 8.595,
+        "beam_kept_mean_abs_error": 0.00296,
+        "beam_kept_p95_abs_error": 0.01368,
+        "beam_kept_max_abs_error": 0.06265,
+        "sky_view_mean_abs_error": 0.00375
+      },
+      {
+        "height_field_m": 2.0,
+        "blocker_points": 159159,
+        "per_sample_ms": 4.11,
+        "beam_kept_mean_abs_error": 0.01115,
+        "beam_kept_p95_abs_error": 0.05839,
+        "beam_kept_max_abs_error": 0.1659,
+        "sky_view_mean_abs_error": 0.01575
+      },
+      {
+        "height_field_m": 3.0,
+        "blocker_points": 88096,
+        "per_sample_ms": 2.719,
+        "beam_kept_mean_abs_error": 0.02244,
+        "beam_kept_p95_abs_error": 0.1098,
+        "beam_kept_max_abs_error": 0.31192,
+        "sky_view_mean_abs_error": 0.03123
+      },
+      {
+        "height_field_m": 5.0,
+        "blocker_points": 39327,
+        "per_sample_ms": 1.699,
+        "beam_kept_mean_abs_error": 0.03391,
+        "beam_kept_p95_abs_error": 0.16208,
+        "beam_kept_max_abs_error": 0.43403,
+        "sky_view_mean_abs_error": 0.04788
+      }
+    ],
+    "search_radius": [
+      {
+        "radius_m": 50.0,
+        "per_sample_ms": 1.391,
+        "mean_candidates": 6478,
+        "beam_kept_mean_abs_error_vs_500m": 0.00912,
+        "beam_kept_max_abs_error_vs_500m": 0.04828
+      },
+      {
+        "radius_m": 100.0,
+        "per_sample_ms": 1.962,
+        "mean_candidates": 12301,
+        "beam_kept_mean_abs_error_vs_500m": 0.0027,
+        "beam_kept_max_abs_error_vs_500m": 0.02447
+      },
+      {
+        "radius_m": 150.0,
+        "per_sample_ms": 2.819,
+        "mean_candidates": 20134,
+        "beam_kept_mean_abs_error_vs_500m": 0.00147,
+        "beam_kept_max_abs_error_vs_500m": 0.01875
+      },
+      {
+        "radius_m": 250.0,
+        "per_sample_ms": 6.995,
+        "mean_candidates": 53900,
+        "beam_kept_mean_abs_error_vs_500m": 0.00047,
+        "beam_kept_max_abs_error_vs_500m": 0.01085
+      },
+      {
+        "radius_m": 500.0,
+        "per_sample_ms": 20.896,
+        "mean_candidates": 141159,
+        "beam_kept_mean_abs_error_vs_500m": 0.0,
+        "beam_kept_max_abs_error_vs_500m": 0.0
+      }
+    ]
+  },
+  "cost_envelope": {
+    "per_building_ms_min": 7.51,
+    "per_building_ms_max": 34.419,
+    "total_wall_clock_s": 260.46
+  }
+}

@@ -1,0 +1,393 @@
+/*
+ * A drawing sheet, not an application chrome.
+ *
+ * Colour is reserved for measurement. The sheet, the rules and the type are all
+ * achromatic or near it; the only saturated things on the page are the roof
+ * planes in the study and the carpet, and in both cases a colour means how much
+ * sun reached a surface.
+ */
+
+@import "@fontsource/archivo/400.css";
+@import "@fontsource/archivo/500.css";
+@import "@fontsource/archivo/600.css";
+@import "@fontsource/archivo/700.css";
+@import "@fontsource/spline-sans-mono/400.css";
+@import "@fontsource/spline-sans-mono/600.css";
+
+:root {
+  /* Buff drafting stock. A sheet, not a white page. */
+  --sheet: #e8dfc9;
+  --cell: #e3d9c2;
+  --ink: #2a2620;
+  --ink-2: #665e4c;
+  --ink-3: #94896f;
+  --rule: #c2b79c;
+  --rule-strong: #8a7f66;
+  --sun: #f0bb3c;
+  --shade: #8f98a8;
+
+  --mono: "Spline Sans Mono", ui-monospace, SFMono-Regular, monospace;
+  --text: "Archivo", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--sheet);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sheet {
+  padding: 0 22px 44px;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+/* ---- title block --------------------------------------------------------- */
+.titleblock {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 22px;
+  align-items: end;
+  border-bottom: 2px solid var(--ink);
+  padding: 12px 0 8px;
+}
+.titleblock h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.sheettitle {
+  margin: 0 0 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.meta {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-align: right;
+}
+.meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.north {
+  width: 38px;
+  height: 38px;
+  color: var(--rule-strong);
+}
+.north text {
+  font-family: var(--mono);
+  fill: var(--ink-2);
+}
+
+/* ---- the key, with the disclosure folded into it ------------------------- */
+.keys {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 7px 0 9px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 12px;
+}
+.k {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+}
+.sw {
+  width: 19px;
+  height: 13px;
+  border: 1px solid var(--rule-strong);
+  display: inline-block;
+}
+.sw.sun {
+  background: var(--sun);
+}
+.sw.shade {
+  background: var(--shade);
+}
+/* Half shadowed, half lit, because the pair is the thing being named. */
+.sw.ground {
+  background: linear-gradient(90deg, #b3a382 0 50%, #dccfb4 50% 100%);
+}
+.sw.simp {
+  background: var(--sun);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(70, 63, 47, 0.45) 0 2.6px,
+    transparent 2.6px 7px
+  );
+}
+.say {
+  margin: 0 0 0 8px;
+  flex: 1;
+  min-width: 420px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.say b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---- the study: nine framed drawings ------------------------------------- */
+.study {
+  display: grid;
+  grid-template-columns: 56px repeat(3, 1fr);
+  /* All nine frames have to be on screen at once. That is the whole idea:
+     the gradient down the rows and across the columns is read before
+     anything is clicked. */
+  /* Tall enough that a square block plan is not squeezed into a letterbox.
+     A row shorter than this and the roof planes the whole pipeline exists to
+     extract stop being separable from each other. */
+  grid-template-rows: auto repeat(3, clamp(250px, 27vh, 320px));
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+.colhead {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--ink-2);
+  text-align: center;
+  padding: 0 0 6px;
+  border-bottom: 1px solid var(--rule);
+}
+.corner {
+  border-bottom: 1px solid var(--rule);
+}
+.rowhead {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--rule);
+  padding: 6px 0;
+}
+.cell {
+  position: relative;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  cursor: crosshair;
+}
+.cell:nth-child(4n + 4) {
+  border-right: none;
+}
+.cellmeta {
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--ink-2);
+  background: rgba(232, 223, 201, 0.82);
+  padding: 1px 5px;
+  pointer-events: none;
+}
+
+/* The WebGL canvas sits behind the grid and is scissored into its cells, so
+   the grid's rules and labels stay real DOM text on top of the drawings. */
+#scene {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.sheet {
+  position: relative;
+}
+
+/* ---- sweep --------------------------------------------------------------- */
+.scrub {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0 0;
+  margin-left: 56px;
+  position: relative;
+  z-index: 1;
+}
+.scrub button {
+  border: 1px solid var(--rule-strong);
+  background: var(--cell);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+.scrub button:hover {
+  background: var(--sheet);
+}
+.scrub .lab {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+}
+.scrub .lab.dim {
+  color: var(--ink-3);
+  margin-left: auto;
+}
+.scrub input[type="range"] {
+  flex: 1;
+  accent-color: var(--ink);
+}
+
+/* ---- the roof this sheet is about ---------------------------------------- */
+.roofline {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px;
+  align-items: end;
+  border-top: 2px solid var(--ink);
+  margin-top: 24px;
+  padding-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+.roofline h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+.roofline .sub {
+  margin: 2px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+}
+.facts {
+  display: flex;
+  gap: 22px;
+}
+.fact .lab {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.fact .val {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+.fact.warn .val {
+  color: var(--ink);
+}
+
+/* ---- carpet -------------------------------------------------------------- */
+.carpetwrap {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 7px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+.hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--ink-3);
+  text-align: right;
+}
+#carpet {
+  border: 1px solid var(--rule-strong);
+  display: block;
+  width: 100%;
+  height: 208px;
+  background: #1d1630;
+}
+.months {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--ink-3);
+  margin-top: 3px;
+}
+.caption {
+  grid-column: 2;
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  max-width: 92ch;
+}
+.caption b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.colophon {
+  margin-top: 26px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--ink-3);
+  position: relative;
+  z-index: 1;
+}
+.colophon a {
+  color: var(--ink-2);
+}
+
+@media (max-width: 900px) {
+  .study {
+    /* Narrow columns, so the same floor applies here for the same reason. */
+    grid-template-rows: auto repeat(3, clamp(220px, 30vh, 300px));
+  }
+  .say {
+    min-width: 0;
+  }
+  .facts {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}

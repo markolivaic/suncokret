@@ -1,0 +1,92 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Rot surfaces without a push: GDAL wheels move, shapely changes what it will
+  # parse, PVGIS retires an API version.
+  schedule:
+    - cron: "17 6 * * 1"
+
+jobs:
+  python:
+    # Linux, though development is on Windows. This is what catches
+    # .venv/Scripts against .venv/bin and backslash path assumptions.
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e "backend[dev]"
+
+      - name: Lint
+        run: ruff check backend scripts tests
+
+      - name: Format check
+        run: ruff format --check backend scripts tests
+
+      # Behavioural tests. The geometry ones are checked against shapes whose
+      # answers are known by hand, and the sky view factor against the closed
+      # form for a uniform horizon, so these are real checks rather than smoke.
+      - name: Behavioural tests
+        run: pytest tests/unit -p no:warnings
+
+      # Honesty guards: the disclosures still exist, the numbers in the README
+      # still match the artefacts that produced them, no local path in the docs.
+      - name: Integrity tests
+        run: pytest tests/integrity -p no:warnings
+
+      - name: Report counts separately
+        if: always()
+        run: |
+          echo "behavioural: $(pytest tests/unit --collect-only -q -p no:warnings | tail -1)"
+          echo "integrity:   $(pytest tests/integrity --collect-only -q -p no:warnings | tail -1)"
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      # ci, not install: the lockfile is the manifest, not a suggestion.
+      - name: Install
+        working-directory: web
+        run: npm ci
+
+      - name: Typecheck
+        working-directory: web
+        run: npm run typecheck
+
+      # The solar position in the browser is a port of the Python one, and this
+      # is what stops the two drifting apart: the reference cases are generated
+      # by the Python module and committed.
+      - name: Frontend tests
+        working-directory: web
+        run: npm test
+
+      # A build is not a test and is not counted as one. It is here because a
+      # broken import in the study would otherwise only surface in a browser.
+      - name: Build
+        working-directory: web
+        run: npm run build
+
+      # Counted separately from the Python suites, and never merged with them.
+      - name: Report count
+        if: always()
+        working-directory: web
+        run: npx vitest run --reporter=basic 2>&1 | tail -5
