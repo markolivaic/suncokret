@@ -1,0 +1,1126 @@
+{
+ "generated_by": "backend/suncokret/sun.py via scripts, committed as a contract",
+ "note": "web/src/sun.ts is a port. If these drift the port is wrong, not this file.",
+ "cases": [
+  {
+   "t": 1579047420.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -61.38337375,
+   "azimuth": 36.892639277
+  },
+  {
+   "t": 1579065420.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -13.066629884,
+   "azimuth": 107.114003459
+  },
+  {
+   "t": 1579079820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 18.634137378,
+   "azimuth": 153.403361804
+  },
+  {
+   "t": 1579090620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 21.069862441,
+   "azimuth": 197.912392577
+  },
+  {
+   "t": 1579101420.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 2.140871144,
+   "azimuth": 236.198360059
+  },
+  {
+   "t": 1579112220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -27.272941394,
+   "azimuth": 267.065339977
+  },
+  {
+   "t": 1579130220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -65.153245144,
+   "azimuth": 6.41409997
+  },
+  {
+   "t": 1584749820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -41.068493415,
+   "azimuth": 24.811871145
+  },
+  {
+   "t": 1584767820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 2.710699957,
+   "azimuth": 92.191037992
+  },
+  {
+   "t": 1584782220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 39.022998346,
+   "azimuth": 144.90924558
+  },
+  {
+   "t": 1584793020.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 41.887978507,
+   "azimuth": 205.201200329
+  },
+  {
+   "t": 1584803820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 18.564008288,
+   "azimuth": 250.722650716
+  },
+  {
+   "t": 1584814620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -12.311994463,
+   "azimuth": 283.930839291
+  },
+  {
+   "t": 1584832620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -43.367367423,
+   "azimuth": 4.83868431
+  },
+  {
+   "t": 1592698620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -18.453200464,
+   "azimuth": 19.107437825
+  },
+  {
+   "t": 1592716620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 19.778502101,
+   "azimuth": 76.323081705
+  },
+  {
+   "t": 1592731020.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 59.727479993,
+   "azimuth": 129.098852928
+  },
+  {
+   "t": 1592741820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 62.504772717,
+   "azimuth": 222.197801644
+  },
+  {
+   "t": 1592752620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 33.917859864,
+   "azimuth": 269.758778104
+  },
+  {
+   "t": 1592763420.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 3.96743581,
+   "azimuth": 300.040527203
+  },
+  {
+   "t": 1592781420.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -20.618895511,
+   "azimuth": 4.635985246
+  },
+  {
+   "t": 1600820220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -40.376401562,
+   "azimuth": 29.640509363
+  },
+  {
+   "t": 1600838220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 4.793188496,
+   "azimuth": 95.319494784
+  },
+  {
+   "t": 1600852620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 39.66730852,
+   "azimuth": 149.726567797
+  },
+  {
+   "t": 1600863420.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 39.849790044,
+   "azimuth": 209.449503075
+  },
+  {
+   "t": 1600874220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 15.36600271,
+   "azimuth": 252.926169398
+  },
+  {
+   "t": 1600885020.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -15.614745607,
+   "azimuth": 285.986170306
+  },
+  {
+   "t": 1600903020.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -44.289545979,
+   "azimuth": 10.107142269
+  },
+  {
+   "t": 1608509820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -62.049561603,
+   "azimuth": 43.81713803
+  },
+  {
+   "t": 1608527820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -12.817207962,
+   "azimuth": 110.558782156
+  },
+  {
+   "t": 1608542220.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 17.304526539,
+   "azimuth": 156.673553194
+  },
+  {
+   "t": 1608553020.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": 18.250253129,
+   "azimuth": 199.920949004
+  },
+  {
+   "t": 1608563820.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -1.226777637,
+   "azimuth": 236.71804907
+  },
+  {
+   "t": 1608574620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -30.691802587,
+   "azimuth": 266.966728434
+  },
+  {
+   "t": 1608592620.0,
+   "lat": 45.815,
+   "lon": 15.9819,
+   "place": "Zagreb",
+   "elevation": -67.166809556,
+   "azimuth": 13.326638896
+  },
+  {
+   "t": 1579047420.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 63.217671128,
+   "azimuth": 68.84856002
+  },
+  {
+   "t": 1579065420.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 45.875114713,
+   "azimuth": 273.78254659
+  },
+  {
+   "t": 1579079820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -2.287210238,
+   "azimuth": 242.454843581
+  },
+  {
+   "t": 1579090620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -29.315296828,
+   "azimuth": 208.882184028
+  },
+  {
+   "t": 1579101420.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -32.33765851,
+   "azimuth": 159.89706559
+  },
+  {
+   "t": 1579112220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -8.58395795,
+   "azimuth": 122.696195958
+  },
+  {
+   "t": 1579130220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 51.005487654,
+   "azimuth": 81.91712165
+  },
+  {
+   "t": 1584749820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 47.808145137,
+   "azimuth": 41.325921263
+  },
+  {
+   "t": 1584767820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 32.959934951,
+   "azimuth": 296.467957801
+  },
+  {
+   "t": 1584782220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -15.718332592,
+   "azimuth": 259.727240889
+  },
+  {
+   "t": 1584793020.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -48.553419854,
+   "azimuth": 221.998656369
+  },
+  {
+   "t": 1584803820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -52.373778051,
+   "azimuth": 148.288254358
+  },
+  {
+   "t": 1584814620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -21.94025352,
+   "azimuth": 104.83599467
+  },
+  {
+   "t": 1584832620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 38.112178024,
+   "azimuth": 56.933826516
+  },
+  {
+   "t": 1592698620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 27.957744778,
+   "azimuth": 26.029342786
+  },
+  {
+   "t": 1592716620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 15.547721913,
+   "azimuth": 313.153624819
+  },
+  {
+   "t": 1592731020.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -28.820753332,
+   "azimuth": 280.219026755
+  },
+  {
+   "t": 1592741820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -65.781310706,
+   "azimuth": 251.061619516
+  },
+  {
+   "t": 1592752620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -69.657141726,
+   "azimuth": 115.627664425
+  },
+  {
+   "t": 1592763420.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -32.954709569,
+   "azimuth": 82.201910227
+  },
+  {
+   "t": 1592781420.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 21.198575603,
+   "azimuth": 39.282257827
+  },
+  {
+   "t": 1600820220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 50.177079228,
+   "azimuth": 36.944909602
+  },
+  {
+   "t": 1600838220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 30.6191843,
+   "azimuth": 293.01678416
+  },
+  {
+   "t": 1600852620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -18.251922059,
+   "azimuth": 256.793387899
+  },
+  {
+   "t": 1600863420.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -49.72589729,
+   "azimuth": 216.465646118
+  },
+  {
+   "t": 1600874220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -49.771708357,
+   "azimuth": 143.812993561
+  },
+  {
+   "t": 1600885020.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -18.31076362,
+   "azimuth": 103.442121474
+  },
+  {
+   "t": 1600903020.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 41.570431063,
+   "azimuth": 54.555811757
+  },
+  {
+   "t": 1608509820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 66.532601154,
+   "azimuth": 69.927320361
+  },
+  {
+   "t": 1608527820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 44.583924088,
+   "azimuth": 269.367051423
+  },
+  {
+   "t": 1608542220.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -2.868067529,
+   "azimuth": 239.118892133
+  },
+  {
+   "t": 1608553020.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -28.26972978,
+   "azimuth": 205.196156204
+  },
+  {
+   "t": 1608563820.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -29.352882608,
+   "azimuth": 157.981955199
+  },
+  {
+   "t": 1608574620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": -5.165449201,
+   "azimuth": 122.796160747
+  },
+  {
+   "t": 1608592620.0,
+   "lat": -33.87,
+   "lon": 151.21,
+   "place": "Sydney",
+   "elevation": 54.311904006,
+   "azimuth": 83.488655927
+  },
+  {
+   "t": 1579047420.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -45.115473026,
+   "azimuth": 333.268798035
+  },
+  {
+   "t": 1579065420.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -33.955657431,
+   "azimuth": 67.129441545
+  },
+  {
+   "t": 1579079820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -8.796439564,
+   "azimuth": 121.270377433
+  },
+  {
+   "t": 1579090620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 3.301460432,
+   "azimuth": 161.407815542
+  },
+  {
+   "t": 1579101420.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 2.533289047,
+   "azimuth": 203.267096509
+  },
+  {
+   "t": 1579112220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -10.668489645,
+   "azimuth": 243.139397079
+  },
+  {
+   "t": 1579130220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -41.082585486,
+   "azimuth": 314.76571891
+  },
+  {
+   "t": 1584749820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -23.965174845,
+   "azimuth": 338.643584522
+  },
+  {
+   "t": 1584767820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -13.891205015,
+   "azimuth": 58.1818171
+  },
+  {
+   "t": 1584782220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 11.306560333,
+   "azimuth": 113.11440275
+  },
+  {
+   "t": 1584793020.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 24.829065361,
+   "azimuth": 158.53200193
+  },
+  {
+   "t": 1584803820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 23.740582619,
+   "azimuth": 208.17465472
+  },
+  {
+   "t": 1584814620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 8.900280496,
+   "azimuth": 252.701387929
+  },
+  {
+   "t": 1584832620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -20.421598508,
+   "azimuth": 322.966097015
+  },
+  {
+   "t": 1592698620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -1.297626377,
+   "azimuth": 343.433441325
+  },
+  {
+   "t": 1592716620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 8.000291374,
+   "azimuth": 50.901003679
+  },
+  {
+   "t": 1592731020.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 32.606069168,
+   "azimuth": 103.713413656
+  },
+  {
+   "t": 1592741820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 47.588925361,
+   "azimuth": 154.958854374
+  },
+  {
+   "t": 1592752620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 45.64163007,
+   "azimuth": 216.373067056
+  },
+  {
+   "t": 1592763420.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 28.848256027,
+   "azimuth": 264.528003353
+  },
+  {
+   "t": 1592781420.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 1.297553755,
+   "azimuth": 329.87432675
+  },
+  {
+   "t": 1600820220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -25.005034872,
+   "azimuth": 342.572886422
+  },
+  {
+   "t": 1600838220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -13.119720478,
+   "azimuth": 61.958626072
+  },
+  {
+   "t": 1600852620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 12.027499267,
+   "azimuth": 116.903607531
+  },
+  {
+   "t": 1600863420.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 24.470641552,
+   "azimuth": 162.698817429
+  },
+  {
+   "t": 1600874220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 21.956879305,
+   "azimuth": 211.85268804
+  },
+  {
+   "t": 1600885020.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 6.350491761,
+   "azimuth": 255.622965024
+  },
+  {
+   "t": 1600903020.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -22.575894233,
+   "azimuth": 326.473785678
+  },
+  {
+   "t": 1608509820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -47.762799355,
+   "azimuth": 336.240247074
+  },
+  {
+   "t": 1608527820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -34.832152616,
+   "azimuth": 71.068823879
+  },
+  {
+   "t": 1608542220.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -9.861376283,
+   "azimuth": 124.524279323
+  },
+  {
+   "t": 1608553020.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": 1.402997536,
+   "azimuth": 164.225039021
+  },
+  {
+   "t": 1608563820.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -0.206407298,
+   "azimuth": 205.293813291
+  },
+  {
+   "t": 1608574620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -13.832418518,
+   "azimuth": 244.468150927
+  },
+  {
+   "t": 1608592620.0,
+   "lat": 64.13,
+   "lon": -21.9,
+   "place": "Reykjavik",
+   "elevation": -44.130966436,
+   "azimuth": 316.934946198
+  },
+  {
+   "t": 1579047420.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -68.656328759,
+   "azimuth": 174.905456579
+  },
+  {
+   "t": 1579065420.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -12.13412743,
+   "azimuth": 111.727064984
+  },
+  {
+   "t": 1579079820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 42.953093453,
+   "azimuth": 119.591249871
+  },
+  {
+   "t": 1579090620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 68.750140166,
+   "azimuth": 185.003109042
+  },
+  {
+   "t": 1579101420.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 39.561797348,
+   "azimuth": 242.10518355
+  },
+  {
+   "t": 1579112220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -1.791133084,
+   "azimuth": 248.869952068
+  },
+  {
+   "t": 1579130220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -65.339828928,
+   "azimuth": 210.450865162
+  },
+  {
+   "t": 1584749820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -87.514826119,
+   "azimuth": 82.231967788
+  },
+  {
+   "t": 1584767820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -12.521737359,
+   "azimuth": 89.571733566
+  },
+  {
+   "t": 1584782220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 47.488128836,
+   "azimuth": 89.283899407
+  },
+  {
+   "t": 1584793020.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 87.444100071,
+   "azimuth": 282.046178395
+  },
+  {
+   "t": 1584803820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 42.488258049,
+   "azimuth": 270.790061578
+  },
+  {
+   "t": 1584814620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -2.518219331,
+   "azimuth": 270.63254893
+  },
+  {
+   "t": 1584832620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -77.513841067,
+   "azimuth": 273.304938012
+  },
+  {
+   "t": 1592698620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -66.274568259,
+   "azimuth": 8.690686535
+  },
+  {
+   "t": 1592716620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -10.276501788,
+   "azimuth": 66.158120059
+  },
+  {
+   "t": 1592731020.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 43.63986337,
+   "azimuth": 56.66219571
+  },
+  {
+   "t": 1592741820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 66.279867008,
+   "azimuth": 351.369887485
+  },
+  {
+   "t": 1592752620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 37.212497697,
+   "azimuth": 299.959023091
+  },
+  {
+   "t": 1592763420.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -3.448221023,
+   "azimuth": 293.479192802
+  },
+  {
+   "t": 1592781420.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -64.143487077,
+   "azimuth": 335.761506452
+  },
+  {
+   "t": 1600820220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -83.846443251,
+   "azimuth": 91.633144646
+  },
+  {
+   "t": 1600838220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -8.830564159,
+   "azimuth": 90.25921481
+  },
+  {
+   "t": 1600852620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 51.182829247,
+   "azimuth": 90.512146028
+  },
+  {
+   "t": 1600863420.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 83.794133661,
+   "azimuth": 266.578064866
+  },
+  {
+   "t": 1600874220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 38.792952459,
+   "azimuth": 269.463225246
+  },
+  {
+   "t": 1600885020.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -6.216535735,
+   "azimuth": 269.530197556
+  },
+  {
+   "t": 1600903020.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -81.217938465,
+   "azimuth": 266.407342032
+  },
+  {
+   "t": 1608509820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -66.117213237,
+   "azimuth": 169.226475952
+  },
+  {
+   "t": 1608527820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -9.436938648,
+   "azimuth": 113.778072859
+  },
+  {
+   "t": 1608542220.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 44.394193656,
+   "azimuth": 123.823498392
+  },
+  {
+   "t": 1608553020.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 66.128119495,
+   "azimuth": 190.635677125
+  },
+  {
+   "t": 1608563820.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": 36.440712681,
+   "azimuth": 240.369224517
+  },
+  {
+   "t": 1608574620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -4.255087667,
+   "azimuth": 246.494758511
+  },
+  {
+   "t": 1608592620.0,
+   "lat": 0.0,
+   "lon": 0.0,
+   "place": "null island",
+   "elevation": -64.484571516,
+   "azimuth": 202.584316123
+  }
+ ]
+}

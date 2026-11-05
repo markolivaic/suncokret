@@ -1,0 +1,24 @@
+{
+  "fetched_on": "2026-08-18",
+  "endpoint": "https://re.jrc.ec.europa.eu/api/v5_3/seriescalc",
+  "request": {
+    "lat": 45.815,
+    "lon": 15.9819,
+    "year": 2020,
+    "angle": 0,
+    "aspect": 0,
+    "components": 1
+  },
+  "response": {
+    "hours": 8784,
+    "radiation_db": "PVGIS-SARAH3",
+    "meteo_db": "ERA5",
+    "elevation_m": 129.0,
+    "use_horizon": true,
+    "horizon_data": "DEM-calculated"
+  },
+  "note": "use_horizon is PVGIS applying a DEM far horizon, which is terrain only. Buildings are not in it. Inter-building shading in this project is computed from ZG3D and is a separate thing.",
+  "file": "zagreb-2020.json",
+  "sha256": "c2acda8995980169192349b0cf012bf58b3a4771ad9ad8c70b3481cb6c5e7c39",
+  "fetch_seconds": 2.76
+}

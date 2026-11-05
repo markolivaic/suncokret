@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>suncokret, a shadow study of Zagreb roofs</title>
+    <meta
+      name="description"
+      content="Nine views of a few blocks of central Zagreb, three hours by three dates, with every roof plane from the city's 3D model coloured by whether the sun reaches it."
+    />
+    <meta property="og:title" content="suncokret, a shadow study of Zagreb roofs" />
+    <meta
+      property="og:description"
+      content="Roof planes from Zagreb's 3D city model, shaded by their neighbours hour by hour, with PVGIS irradiance."
+    />
+    <meta property="og:image" content="https://suncokret.vercel.app/og.jpg" />
+    <meta property="og:url" content="https://suncokret.vercel.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="sheet">
+      <div class="frame">
+        <header class="titleblock">
+          <h1>suncokret</h1>
+          <p class="sheettitle">shadow study, sheet 01</p>
+          <p class="meta" id="meta">loading the district&hellip;</p>
+          <svg class="north" viewBox="0 0 38 38" role="img" aria-label="north arrow, pointing up">
+            <circle cx="19" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1" />
+            <path d="M19 6 L23.5 24 L19 20.5 L14.5 24 Z" fill="currentColor" />
+            <text x="19" y="36" text-anchor="middle" font-size="8">N</text>
+          </svg>
+        </header>
+
+        <div class="keys">
+          <span class="k"><i class="sw sun"></i> roof plane in sun</span>
+          <span class="k"><i class="sw shade"></i> in shadow</span>
+          <span class="k"><i class="sw ground"></i> ground, shadowed and in sun</span>
+          <span class="k"><i class="sw simp"></i> hatched: 2008 capture, one roof plane for the whole building</span>
+          <p class="say">
+            How much sunlight reaches each roof plane, and when buildings take it.
+            It does not estimate electricity: nobody publishes per-roof
+            generation for Zagreb, so there is nothing to check such a figure against.
+          </p>
+        </div>
+
+        <div class="scrub">
+          <button id="play" type="button" aria-pressed="false">&#9654;&nbsp; play</button>
+          <label class="lab" for="time">time of day</label>
+          <input id="time" type="range" min="0" max="51" value="24" step="1" />
+          <span class="lab clock" id="clock" aria-live="polite">12:00</span>
+        </div>
+
+        <div class="study" id="study" role="group" aria-describedby="studyText">
+          <p class="visually-hidden" id="studyText">
+            Nine drawings of the same blocks of central Zagreb, seen from the south-west:
+            three times of day across and three dates down. Each label below gives the
+            date, the time and where the sun is. Select a roof in a drawing, or use the
+            buttons under the drawings.
+          </p>
+          <div class="corner"></div>
+          <div class="colhead" data-col="0">09:00</div>
+          <div class="colhead" data-col="1">12:00</div>
+          <div class="colhead" data-col="2">15:00</div>
+
+          <div class="rowhead" data-row="0">21 December</div>
+          <div class="cell" data-cell="0"><span class="cellmeta"></span></div>
+          <div class="cell" data-cell="1"><span class="cellmeta"></span></div>
+          <div class="cell" data-cell="2"><span class="cellmeta"></span></div>
+
+          <div class="rowhead" data-row="1">21 March</div>
+          <div class="cell" data-cell="3"><span class="cellmeta"></span></div>
+          <div class="cell" data-cell="4"><span class="cellmeta"></span></div>
+          <div class="cell" data-cell="5"><span class="cellmeta"></span></div>
+
+          <div class="rowhead" data-row="2">21 June</div>
+          <div class="cell" data-cell="6"><span class="cellmeta"></span></div>
+          <div class="cell" data-cell="7"><span class="cellmeta"></span></div>
+          <div class="cell" data-cell="8"><span class="cellmeta"></span></div>
+        </div>
+      </div>
+
+      <canvas id="scene" aria-hidden="true"></canvas>
+
+      <section class="roofline">
+        <div>
+          <h2 id="roofName">Pick a roof plane</h2>
+          <p class="sub" id="roofSub">Select any roof in the drawing above.</p>
+          <div class="pick" role="group" aria-label="choose a roof">
+            <button type="button" data-pick="best">most sun</button>
+            <button type="button" data-pick="prev">&larr; more sun</button>
+            <button type="button" data-pick="next">less sun &rarr;</button>
+            <button type="button" data-pick="worst">least sun</button>
+          </div>
+        </div>
+        <div class="facts" id="facts" aria-live="polite"></div>
+      </section>
+
+      <div class="carpetwrap">
+        <div class="hours" aria-hidden="true"><span>24</span><span>18</span><span>12</span><span>06</span><span>00</span></div>
+        <canvas id="carpet" width="1200" height="208" role="img" aria-label="the selected roof's year, hour by day"></canvas>
+        <div class="months" aria-hidden="true">
+          <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+          <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+        </div>
+        <div class="carpetkey" id="carpetKey"></div>
+        <p class="caption" id="caption" aria-live="polite">
+          Day of year across, Zagreb clock hour up.
+        </p>
+      </div>
+
+      <footer class="colophon" id="colophon"></footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

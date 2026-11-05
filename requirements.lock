@@ -1,0 +1,18 @@
+# Exact versions CI installs, Python 3.12. Regenerate in a fresh environment with
+#   pip install -e "backend[dev]" && pip freeze --exclude-editable
+certifi==2026.7.22
+charset-normalizer==3.5.1
+colorama==0.4.6; sys_platform == "win32"
+idna==3.19
+iniconfig==2.3.0
+numpy==2.5.2
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0
+pyogrio==0.13.0
+pyproj==3.7.2
+pytest==9.1.1
+requests==2.34.2
+ruff==0.16.3
+shapely==2.1.2
+urllib3==2.7.0

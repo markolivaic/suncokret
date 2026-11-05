@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "suncokret"
+version = "0.1.0"
+description = "Roof planes from the ZG3D city model of Zagreb, shaded by their neighbours, with PVGIS irradiance"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "shapely>=2.0",
+    "pyogrio>=0.9",
+    "pyproj>=3.6",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["suncokret*"]

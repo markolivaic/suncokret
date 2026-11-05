@@ -1,0 +1,466 @@
+/*
+ * A drawing sheet. The only saturated colours on the page are on the roofs and
+ * in the carpet, and in both a colour means how much sun reached a surface.
+ */
+
+@import "@fontsource/archivo/400.css";
+@import "@fontsource/archivo/500.css";
+@import "@fontsource/archivo/600.css";
+@import "@fontsource/archivo/700.css";
+@import "@fontsource/spline-sans-mono/400.css";
+@import "@fontsource/spline-sans-mono/600.css";
+
+:root {
+  --sheet: #e8dfc9;
+  --cell: #e3d9c2;
+  --ink: #2a2620;
+  --ink-2: #5c5444;
+  --rule: #c2b79c;
+  --rule-strong: #8a7f66;
+  --sun: #f0bb3c;
+  --shade: #5b6782;
+
+  --mono: "Spline Sans Mono", ui-monospace, SFMono-Regular, monospace;
+  --text: "Archivo", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--sheet);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.sheet {
+  position: relative;
+  padding: 0 22px 44px;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+/* Everything down to the bottom of the nine drawings fills one screen, so all
+   nine are visible together with the controls above them. */
+.frame {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  min-height: 620px;
+}
+
+/* ---- title block --------------------------------------------------------- */
+.titleblock {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 22px;
+  align-items: end;
+  border-bottom: 2px solid var(--ink);
+  padding: 10px 0 7px;
+}
+.titleblock h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.sheettitle {
+  margin: 0 0 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.meta {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-align: right;
+}
+.meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.north {
+  width: 34px;
+  height: 34px;
+  color: var(--rule-strong);
+}
+.north text {
+  font-family: var(--mono);
+  fill: var(--ink-2);
+}
+
+/* ---- key ----------------------------------------------------------------- */
+.keys {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 6px 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6px 0 7px;
+  border-bottom: 1px solid var(--rule);
+}
+.k {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+}
+.sw {
+  width: 19px;
+  height: 13px;
+  border: 1px solid var(--rule-strong);
+  display: inline-block;
+  flex: none;
+}
+.sw.sun {
+  background: var(--sun);
+}
+.sw.shade {
+  background: var(--shade);
+}
+.sw.ground {
+  background: linear-gradient(90deg, #b3a382 0 50%, #dccfb4 50% 100%);
+}
+.sw.simp {
+  background: var(--sun);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(70, 63, 47, 0.45) 0 2.6px,
+    transparent 2.6px 7px
+  );
+}
+.say {
+  margin: 0;
+  flex: 1 1 360px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+
+/* ---- sweep --------------------------------------------------------------- */
+.scrub {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  margin-left: 56px;
+  position: relative;
+  z-index: 1;
+}
+button {
+  border: 1px solid var(--rule-strong);
+  background: var(--cell);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--sheet);
+}
+.lab {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+}
+.clock {
+  color: var(--ink);
+  min-width: 5ch;
+}
+.scrub input[type="range"] {
+  flex: 1;
+  accent-color: var(--ink);
+}
+
+/* ---- the nine drawings --------------------------------------------------- */
+.study {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 56px repeat(3, 1fr);
+  grid-template-rows: auto repeat(3, minmax(150px, 1fr));
+  position: relative;
+  z-index: 1;
+}
+.colhead {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--ink-2);
+  text-align: center;
+  padding: 0 0 5px;
+  border-bottom: 1px solid var(--rule);
+}
+.corner {
+  border-bottom: 1px solid var(--rule);
+}
+.rowhead {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--rule);
+  padding: 6px 0;
+}
+.cell {
+  position: relative;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  cursor: crosshair;
+  overflow: hidden;
+}
+.cell:nth-child(4n + 5) {
+  border-right: none;
+}
+.cellmeta {
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+  background: rgba(232, 223, 201, 0.85);
+  padding: 1px 5px;
+  pointer-events: none;
+}
+.celldate {
+  display: none;
+}
+
+/* The selected roof, ringed in every drawing. */
+.ring {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2px rgba(232, 223, 201, 0.9),
+    inset 0 0 0 2px rgba(232, 223, 201, 0.9);
+  pointer-events: none;
+}
+
+/* The WebGL canvas sits behind the grid and is scissored into its cells, so
+   the grid's rules and labels stay DOM text on top of the drawings. */
+#scene {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- the selected roof --------------------------------------------------- */
+.roofline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  align-items: flex-end;
+  border-top: 2px solid var(--ink);
+  margin-top: 22px;
+  padding-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+.roofline > div:first-child {
+  flex: 1 1 340px;
+}
+.roofline h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+.roofline .sub {
+  margin: 2px 0 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+}
+.pick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.facts {
+  flex: 0 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+.fact .lab {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.fact .val {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- carpet -------------------------------------------------------------- */
+.carpetwrap {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 7px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+.hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+  text-align: right;
+}
+#carpet {
+  border: 1px solid var(--rule-strong);
+  display: block;
+  width: 100%;
+  height: 208px;
+  background: var(--sheet);
+}
+.carpetkey {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 6px;
+}
+.carpetkey .ramp {
+  width: 72px;
+  height: 11px;
+  border: 1px solid var(--rule-strong);
+  display: inline-block;
+  flex: none;
+}
+.months {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+  margin-top: 3px;
+}
+.caption {
+  grid-column: 2;
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--ink-2);
+  max-width: 92ch;
+}
+.caption b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.colophon {
+  margin-top: 26px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- narrow screens: one drawing per row --------------------------------- */
+@media (max-width: 700px) {
+  .sheet {
+    padding: 0 14px 32px;
+  }
+  .frame {
+    height: auto;
+    min-height: 0;
+  }
+  .titleblock {
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+  }
+  .titleblock .meta {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+  .titleblock .north {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .scrub {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+  .scrub input[type="range"] {
+    flex-basis: 100%;
+    order: 3;
+  }
+  .study {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 62vw;
+  }
+  .corner,
+  .colhead,
+  .rowhead {
+    display: none;
+  }
+  .cell {
+    border-right: none;
+  }
+  .celldate {
+    display: inline;
+  }
+  .carpetwrap {
+    grid-template-columns: 22px 1fr;
+  }
+  #carpet {
+    height: 160px;
+  }
+}

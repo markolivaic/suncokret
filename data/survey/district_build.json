@@ -1,0 +1,69 @@
+{
+  "generated_by": "scripts/build_district.py",
+  "generated_on": "2026-10-31",
+  "machine": "Windows AMD64, Python 3.12.1",
+  "district": "kaptol-donji-grad",
+  "timing_s": {
+    "note": "the horizon pass covers every drawn face because the drawing shades all of them; the irradiance pass covers only the planes a reader can select, so the two are reported per their own population rather than divided into each other",
+    "load": 3.86,
+    "blockers": 1.3,
+    "horizons": 259.83,
+    "ground_raster": 4.43,
+    "horizon_per_face_ms": 11.101,
+    "irradiance": 1.91,
+    "irradiance_per_plane_ms": 2.452
+  },
+  "counts": {
+    "buildings_loaded": 2327,
+    "faces_rendered": 23407,
+    "triangles": 48268,
+    "selectable_planes": 777,
+    "simplified_buildings": 907,
+    "wkb_repaired": 0
+  },
+  "bundle_bytes": {
+    "bin": 3285036
+  },
+  "ground": {
+    "cells": 192,
+    "cell_m": 2.059,
+    "size_m": 395.2,
+    "z_m": 121.25
+  },
+  "kept_distribution": {
+    "planes": 777,
+    "mean": 0.9328,
+    "p10": 0.7591,
+    "median": 0.9787,
+    "worst": 0.5695
+  },
+  "beam_kept_distribution": {
+    "mean": 0.9426,
+    "worst": 0.5529
+  },
+  "sunlight_on_roof_kwh_per_m2": {
+    "note": "plane-of-array irradiance over the year, not electricity",
+    "min": 639.7,
+    "p10": 955.9,
+    "median": 1343.3,
+    "max": 1601.9
+  },
+  "diffuse_shading_effect": {
+    "note": "kept with diffuse treated as unobstructed, against kept with diffuse reduced by the sky the neighbours cover",
+    "diffuse_share_of_global_horizontal": 0.4135,
+    "mean_overstatement": 0.0339,
+    "mean_overstatement_worst_tenth": 0.1231,
+    "max_overstatement": 0.1848
+  },
+  "selectable_planes_on_single_plane_buildings": 46,
+  "single_sample_penalty": {
+    "planes_checked": 200,
+    "planes_in_bundle": 777,
+    "note": "bundle value minus five-sample value, on a random sample of planes; positive means the single centroid sample reports a roof as less shaded than it is",
+    "kept_mean_abs_difference": 0.00218,
+    "kept_mean_signed_difference": -0.00018,
+    "kept_max_abs_difference": 0.02277,
+    "beam_kept_mean_abs_difference": 0.00322,
+    "beam_kept_max_abs_difference": 0.03192
+  }
+}
